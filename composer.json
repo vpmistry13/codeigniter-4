@@ -1,0 +1,34 @@
+{
+	"description": "The CodeIgniter framework v4",
+	"name": "codeigniter4/framework",
+	"type": "project",
+	"homepage": "https://codeigniter.com",
+	"license": "MIT",
+	"support": {
+		"forum": "http://forum.codeigniter.com/",
+		"wiki": "https://github.com/bcit-ci/CodeIgniter4/wiki",
+		"slack": "https://codeigniterchat.slack.com",
+		"source": "https://github.com/bcit-ci/CodeIgniter4"
+	},
+	"autoload": {
+		"psr-4": {
+			"CodeIgniter\\": "system/"
+		}
+	},
+	"require": {
+		"php": ">=7.0",
+		"zendframework/zend-escaper": "^2.5",
+		"paragonie/sodium_compat": "^1.1",
+		"kint-php/kint": "^2.1"
+	},
+	"require-dev": {
+		"phpunit/phpunit": "^6.0",
+		"mikey179/vfsStream": "1.6.*"
+	},
+	"scripts": {
+		"post-update-cmd": [
+			"composer dump-autoload",
+			"CodeIgniter\\ComposerScripts::postUpdate"
+		]
+	}
+}
